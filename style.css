@@ -1,0 +1,663 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=BIZ+UDPMincho:wght@700&family=Caprasimo&family=Klee+One:wght@600&family=Lobster&family=Luckiest+Guy&family=Noto+Serif+JP:wght@200;300;600;700&family=Yuji+Syuku&family=Yusei+Magic&family=Zen+Old+Mincho:wght@700&display=swap');
+
+/*＝＝＝＝＝＝＝＝＝画像切り替え用＝＝＝＝＝＝＝＝＝＝＝＝*/
+@keyframes zoomUp {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.15);
+    }
+  }
+  .swiper-slide-active .swiper-img,
+  .swiper-slide-duplicate-active .swiper-img,
+  .swiper-slide-prev .swiper-img {
+    animation: zoomUp 7s linear 0s normal both;
+  }
+  .swiper-slide img {
+    height: auto;
+    width: 100%;
+  }
+
+  /*＝＝＝＝＝＝＝＝＝＝ハンバーガーメニュー＝＝＝＝＝＝＝＝＝＝*/
+
+  body{
+    font-weight: 400;
+    background-color: #041113;
+
+}
+
+/*メニュー開いたとこ*/
+nav{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background:url(../img/23-07-12\ 10-38-23\ 1211.png)center top/100% no-repeat ;
+    top: -1000px; 
+    left: 0;
+    bottom: 0;
+    transition-duration: 0.4s;
+    transition-timing-function:ease-in-out;
+    transition-delay: 0s;
+    transition-property: all;
+
+    z-index: 40;
+    opacity: 0;
+
+}
+
+/*メニューボタン押した時の動作*/
+.open nav{
+    top: 0;
+    opacity: 0.9;
+}
+
+nav .inner{
+    padding: 100px;
+}
+
+/*点消す*/
+nav .inner ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*メニュー選択文字*/
+nav .inner ul li a ,nav .inner ul li b ,nav .inner ul li c,nav .inner ul li d,nav .inner ul li e{
+    
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  color: #007e75;
+  font-size: 55px;
+  padding: 1rem;
+  transition-duration: 0.2s;
+  font-family: 'Zen Old Mincho', serif;
+  
+}
+
+/*==最新情報（a）==*/
+
+/*マウス置いた時の挙動*/
+
+nav .inner ul li a::before{
+  background:url(../img/23-07-12\ 14-58-55\ 1218.png)center top/100% no-repeat ;
+  content: "";
+  display: block;
+  width:100%;
+  height:100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  transform: scale(0, 1);
+  transform-origin: right top;
+  transition: transform .3s;
+  z-index: -1;
+}
+nav .inner ul li a:hover{
+    color: #195595;
+    font-size: 65px;
+}
+
+nav .inner ul li a:hover:before {
+    transform-origin: left top;
+    transform: scale(1, 1);
+  }
+
+
+  /*==作品紹介（b）==*/
+
+/*マウス置いた時の挙動*/
+nav .inner ul li b::before{
+  background:url(../img/23-07-12\ 15-25-06\ 1223.png)center top/100% no-repeat ;
+  content: "";
+  display: block;
+  width:100%;
+  height:100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  transform: scale(0, 1);
+  transform-origin: right top;
+  transition: transform .3s;
+  z-index: -1;
+}
+nav .inner ul li b:hover{
+    color: #ffffff;
+    font-size: 65px;
+}
+
+nav .inner ul li b:hover:before {
+    transform-origin: left top;
+    transform: scale(1, 1);
+  }
+
+  /*==クレジット（c）==*/
+
+/*メニュー選択文字*/
+
+/*マウス置いた時の挙動*/
+nav .inner ul li c::before{
+background:url(../img/23-07-12\ 15-42-51\ 1224.png)center top/100% no-repeat ;
+content: "";
+display: block;
+width:100%;
+height:100%;
+position: absolute;
+left: 0;
+bottom: 0;
+margin: auto;
+transform: scale(0, 1);
+transform-origin: right top;
+transition: transform .3s;
+z-index: -1;
+}
+nav .inner ul li c:hover{
+  color: #5c0b0b;
+  font-size: 65px;
+}
+
+nav .inner ul li c:hover:before {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+
+  /*==登場人物（d）==*/
+
+/*メニュー選択文字*/
+
+/*マウス置いた時の挙動*/
+nav .inner ul li d::before{
+  background:url(../img/23-07-13\ 10-09-31\ 1235.png)center top/100% no-repeat ;
+  content: "";
+  display: block;
+  width:100%;
+  height:100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  transform: scale(0, 1);
+  transform-origin: right top;
+  transition: transform .3s;
+  z-index: -1;
+  }
+  nav .inner ul li d:hover{
+    color: #fff7b8;
+    font-size: 65px;
+  }
+  
+  nav .inner ul li d:hover:before {
+    transform-origin: left top;
+    transform: scale(1, 1);
+  }
+
+    /*==メディア情報(e）==*/
+
+/*メニュー選択文字*/
+
+/*マウス置いた時の挙動*/
+nav .inner ul li e::before{
+  background:url(../img/23-07-13\ 10-05-53\ 1234.png)center top/100% no-repeat ;
+  content: "";
+  display: block;
+  width:100%;
+  height:100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  transform: scale(0, 1);
+  transform-origin: right top;
+  transition: transform .3s;
+  z-index: -1;
+  }
+  nav .inner ul li e:hover{
+    color: #3f2607;
+    font-size: 65px;
+   
+  }
+  
+  nav .inner ul li e:hover:before {
+    transform-origin: left top;
+    transform: scale(1, 1);
+  }
+
+
+
+
+/*メニューボタン*/
+.toggle-btn{
+    display: block;
+    position: fixed;
+    top: 30px;
+    right: -60px;
+    width: 60px;
+    height: 60px;
+    z-index: 50;
+    cursor: pointer;
+    background-color: #041113;
+    opacity: 0.9;
+    transition-duration: .4s;
+    animation-delay: 14s;
+    
+}
+
+
+
+
+
+/*メニューボタンの三本線*/
+.toggle-btn span{
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 40px;
+    height: 6px;
+    background-color: #ffffff;
+    transition: ease 0.4s;
+    margin-left: 10px;
+}
+
+
+
+/*マウスをトグルに置いたときの挙動*/
+.toggle-btn:hover{
+
+   background-color: #c44010;
+   opacity: 0.8;
+   transform: scale(0.8,0.8);
+   border-radius: 8px;
+}
+
+/*１本目*/
+.toggle-btn span:nth-child(1){
+    top:15px;
+}
+/*２本目*/
+.toggle-btn span:nth-child(2){
+    top: 27px;
+}
+/*３本目*/
+.toggle-btn span:nth-child(3){
+    bottom:15px;
+}
+
+/* ハンバーガーメニュークリック後のスタイル */
+.open .toggle-btn{
+    transform: translateX(0);
+    background-color: #10c4b8;
+    transition-duration: .4s;
+  }
+
+.open .toggle-btn:hover{
+    background-color: #fdb653;
+    transform: scale(1.2,1.2);
+    border-radius: 8px;
+}
+
+
+
+/*メニューを開けた時のマークを白にする*/
+.open .toggle-btn span{
+    background-color: #ffffff;
+}
+
+/*メニューを開いた時に右上のマークを✖️にする*/
+.open .toggle-btn span:nth-child(1){
+    top: 28px;
+  transform: rotate(45deg);
+}
+.open .toggle-btn span:nth-child(2){
+    opacity: 0;
+}
+.open .toggle-btn span:nth-child(3){
+    top: 28px;
+  transform: rotate(-45deg);
+  
+
+}
+
+
+
+
+/*＝＝＝＝＝＝＝＝＝＝＝画像流れて入る*＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝/
+
+/*========= レイアウトのためのCSS ===============*/
+
+p{
+    margin: 0px;
+    font-size: 20px;
+    overflow: hidden;/*左右アニメーションで画面からはみ出る際に出る横スクロールバーを隠す*/
+  }
+  
+  /*========= 流れるテキスト ===============*/
+  
+  /*全共通*/
+  
+  .slide-in {
+    overflow: hidden;
+      display: inline-block;
+  }
+  
+  .slide-in_inner {
+    display: inline-block;
+    
+  
+  }
+
+
+  
+  /* 上下のアニメーション*/
+  .upAnime{
+      opacity: 0;/* 事前に透過0 にして消しておく*/
+      position: absolute;
+    z-index: 4;
+  }
+
+ 
+
+  .cope{
+    animation-delay: 6s;
+  }
+  
+  .deko{
+    animation-delay: 11s;
+  }
+
+
+  .slideAnimeDownUp {
+      animation-name:slideTextY100;
+      animation-duration:1s;
+      animation-fill-mode:forwards;
+      opacity: 0;
+  }
+  
+  @keyframes slideTextY100 {
+      from {
+          transform: translateY(100%);/* 要素を上の枠外に移動*/
+          opacity: 0;
+      }
+      to {
+          transform: translateY(0);/* 要素を元の位置に移動*/
+          opacity: 1;
+      }
+  }
+  .slideAnimeUpDown {
+      animation-name:slideTextY-100;
+      animation-duration:1s;
+      animation-fill-mode:forwards;
+      opacity: 0;
+  }
+  
+  @keyframes slideTextY-100 {
+      from {
+      transform: translateY(-100%);/* 要素を下の枠外に移動*/
+      opacity: 0;
+      }
+      to {
+      transform: translateY(0);/* 要素を元の位置に移動*/
+      opacity: 1;
+      }
+  }
+
+  /* 上下のアニメーション*/
+.downAnime{
+  opacity: 0;/* 事前に透過0 にして消しておく*/
+  position: absolute;
+    z-index: 4;
+    bottom: 0;
+}
+
+.name{
+  
+    animation-delay: 10.5s;
+    opacity: 1;
+}
+
+
+.effect{
+    animation-delay: 11s;
+}
+
+.roadshow{
+  animation-delay: 14s;
+  bottom: 0;
+  left: 0;
+}
+
+.slideAnimeDownUp {
+  animation-name:slideTextY100;
+  animation-duration:0.8s;
+  animation-fill-mode:forwards;
+  opacity: 0;
+}
+
+@keyframes slideTextY100 {
+  from {
+      transform: translateY(100%);/* 要素を上の枠外に移動*/
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);/* 要素を元の位置に移動*/
+      opacity: 1;
+  }
+}
+
+.slideAnimeUpDown {
+  animation-name:slideTextY-100;
+  animation-duration:0.8s;
+  animation-fill-mode:forwards;
+  opacity: 0;
+}
+
+@keyframes slideTextY-100 {
+  from {
+      transform: translateY(-100%);/* 要素を下の枠外に移動*/
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);/* 要素を元の位置に移動*/
+      opacity: 1;
+  }
+}
+
+/*左右のアニメーション*/
+.rightAnime{
+  opacity: 0;/*事前に透過0にして消しておく*/
+  position: absolute;
+    z-index: 60;
+    bottom: 0;
+  
+}
+
+.slideAnimeLeftRight {
+animation-name:slideTextX100;
+animation-duration:0.8s;
+animation-fill-mode:forwards;
+  opacity: 0;
+}
+
+
+
+@keyframes slideTextX100 {
+from {
+transform: translateX(-100%); /*要素を左の枠外に移動*/
+      opacity: 0;
+}
+
+to {
+transform: translateX(0);/*要素を元の位置に移動*/
+  opacity: 0.8;
+}
+}
+
+.slideAnimeRightLeft {
+animation-name:slideTextX-100;
+animation-duration:0.8s;
+animation-fill-mode:forwards;
+  opacity: 0;
+}
+
+
+
+@keyframes slideTextX-100 {
+from {
+transform: translateX(100%);/*要素を右の枠外に移動*/
+  opacity: 0;
+  right: 0px;
+}
+
+to {
+transform: translateX(0);/*要素を元の位置に移動*/
+  opacity: 0.8;
+  right: 30px;
+  
+  
+}
+}
+
+
+
+
+/*＝＝＝＝ローディング＝＝＝＝*/
+.water{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 20;
+  background:url(../img/23-07-14\ 22-38-05\ 1255.png);
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  -moz-animation: cssAnimation 0s ease-in 3s forwards;
+  /* Firefox */
+  -webkit-animation: cssAnimation 0s ease-in 3s forwards;
+  /* Safari and Chrome */
+  -o-animation: cssAnimation 0s ease-in 3s forwards;
+  /* Opera */
+  animation: cssAnimation 0s linear 3s forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  animation: fadeout-anim 1s linear forwards;
+  animation-delay: 5s;
+
+          }
+          @keyframes cssAnimation {
+              to {
+                  width:0;
+                  height:0;
+                  overflow:hidden;
+              }
+          }
+          @-webkit-keyframes cssAnimation {
+              to {
+                  width:0;
+                  height:0;
+                  visibility:hidden;
+              }
+          }
+
+          @keyframes fadeout-anim {
+              100% {
+                  opacity: 0;
+              }
+          }
+
+/*波紋*/
+.water span{
+  position: absolute;
+  top: 350px;
+  left: 695px;;
+  transform: translate(-50%,-50%);
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+   animation: water 5s linear infinite;
+          }
+          .water span:nth-child(1){animation-delay: 0s;}
+          .water span:nth-child(2){animation-delay: .5s;}
+          .water span:nth-child(3){animation-delay: 1s;}
+          .water span:nth-child(4){animation-delay: 1.5s;}
+          .water span:nth-child(5){animation-delay: 2s;}
+          .water span:nth-child(6){animation-delay: 2.5s;}
+          .water span:nth-child(7){animation-delay: 3s;}
+          .water span:nth-child(8){animation-delay: 3.5s;}
+          .water span:nth-child(9){animation-delay: 4s;}
+          .water span:nth-child(10){animation-delay: 4.5s;}
+          @keyframes water{
+              0%{width: 0px;height: 0px;box-shadow: 0px 25px 25px rgba(0,0,0,.3),0px 0px 15px rgba(0,0,0,.3);}
+              85%{width: 480px;height: 480px;opacity: 1;}
+              100%{width: 600px; height:600px;opacity: 0;}}
+
+.water p{
+  position: absolute;
+  top: 450px;
+  left: auto;
+  size: 20%;
+ 
+
+}
+
+/*--ローディング文字--*/
+/*点滅*/
+.blink {
+animation: blinking 1s ease-in-out infinite alternate;
+}
+
+@keyframes blinking {
+0% {opacity: 0;}
+100% {opacity: 1;}
+}
+
+/*右から左へ*/
+@keyframes infinity-scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/*
+IE11対策
+----------------------------*/
+_:-ms-lang(x)::-ms-backdrop,
+.d-demo {
+  display: -ms-grid;
+  overflow: hidden;
+}
+/*----------------------------*/
+
+.d-demo__wrap {
+  display: flex;
+  overflow: hidden;
+}
+
+.d-demo__list {
+  display: flex;
+  list-style: none;
+}
+
+.d-demo__list--left{
+animation :infinity-scroll-left 35s infinite linear 0s both;
+}
+
+.d-demo__item {
+  width: 1366px;
+  height: 685px;
+
+}
+.d-demo__item > img{
+   width: 100%;
+}
